@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 font-body min-h-screen antialiased;
+  background-image: var(--mesh-background);
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+:root {
+  --mesh-background: radial-gradient(circle at 14% 18%, rgba(215,38,61,0.06), transparent 28%), radial-gradient(circle at 82% 8%, rgba(255,180,180,0.14), transparent 22%), radial-gradient(circle at 50% 70%, rgba(215,38,61,0.05), transparent 32%);
+}
+
+.pill {
+  @apply inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-semibold bg-primary/10 text-primaryDark border border-primary/15;
+}
+
+.primary-btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-white bg-primary shadow-md shadow-primary/25 transition duration-150 hover:bg-primaryDark;
+}
+
+.ghost-btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-semibold text-primaryDark bg-white border border-slate-200 transition duration-150 hover:border-primary hover:text-primary;
+}
+
+.section-card {
+  @apply bg-white border border-slate-200 rounded-2xl shadow-sm transition-shadow duration-150;
+}
+.section-card:hover {
+  @apply shadow-lg shadow-primary/5;
+}
+
+.hero-band {
+  @apply rounded-2xl overflow-hidden text-white shadow-lg;
+  background-image: linear-gradient(135deg, #d7263d 0%, #cc2c3f 50%, #8b1a2d 100%);
+}
+
+.hero-band.crimson {
+  background-image: linear-gradient(135deg, #cc2c3f 0%, #a61b2c 50%, #5a1020 100%);
+}
+
+.hero-band.rust {
+  background-image: linear-gradient(135deg, #b83c3c 0%, #8b1a2d 50%, #5a1020 100%);
+}
+
+.cta-ribbon {
+  @apply w-full h-1 bg-gradient-to-r from-primary via-accent to-primary/70 rounded-full;
+}
+
+.stat-chip {
+  @apply bg-white/10 border border-white/15 text-white rounded-md px-3 py-2 text-sm font-semibold;
+}
+
+.section-title {
+  @apply text-2xl font-display font-semibold text-slate-900;
+}
+
+.subtext {
+  @apply text-slate-500;
+}
+
+.card-title {
+  @apply text-lg font-display font-semibold text-slate-900;
+}
+
+.card-sub {
+  @apply text-sm text-slate-500;
+}
+
+.blood-drop {
+  @apply text-3xl;
+}
+
+.stat-box {
+  @apply px-4 py-3 rounded-lg border border-slate-200 text-center font-semibold;
+}
+
+.activity-item {
+  @apply px-4 py-3 rounded-lg border border-slate-200 flex items-center gap-3 transition hover:shadow-md;
+}
+
+.chip {
+  @apply inline-flex items-center justify-center px-3 py-2 rounded-full text-sm font-semibold border;
+}
+
+.chip-red {
+  @apply bg-white border-primary text-primary hover:bg-primary hover:text-white transition;
+}
+
+.chip-filled {
+  @apply bg-primary text-white;
+}
